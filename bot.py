@@ -85,8 +85,8 @@ async def start(bot, message):
             unshort =ome_mdisk(link)
             mdisk = gen_mdisk(unshort)
             text = re.sub(link, mdisk, text)
-            await msg.edit_text("Updating the link {}".format(a))
             ++a
+        await msg.edit_text("Movie Uploaded")
         await bot.send_photo(group_id,
                              photo = photo,
                                reply_to_message_id=message.id, caption=text)
